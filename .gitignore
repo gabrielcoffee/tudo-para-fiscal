@@ -1,0 +1,26 @@
+# Node dependencies
+node_modules/
+
+# Build output
+build/
+
+# Environment variables
+.env
+.env.*.local
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+
+# Logs and temporary files
+npm-debug.log*
+yarn-error.log
+*.log
+*.gz
+
+# OS-specific files
+.DS_Store
+Thumbs.db
