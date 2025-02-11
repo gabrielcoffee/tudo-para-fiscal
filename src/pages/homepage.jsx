@@ -70,7 +70,7 @@ return (
 	<main className="flex-grow flex items-center justify-center px-4 my-12">
 		<div className="text-left max-w-5xl flex flex-col items-center gap-6">
 
-		<img width={200} className="mb-8 mt-3" src="./src/assets/logotudopara.png"></img>
+		<img width={200} className="mb-8 mt-3" src="/src/assets/logotudopara.png"></img>
 
 		<div className="text-center text-5xl text-[#2a2b28] text-balance">Verifique se um número faz parte da equipe oficial da <strong><span className="text-[#062846] ">Tudo Para</span></strong></div>
 	
