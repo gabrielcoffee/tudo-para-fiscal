@@ -1,8 +1,8 @@
-# React + Vite
+# Tudo Para Fiscal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Number Validator
 
-Currently, two official plugins are available:
+Easily verify if a number is valid and associated with an authorized member of Tudo Para.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Preview of the page
+<img width="1710" alt="Screenshot 2025-02-11 at 3 19 09 PM" src="https://github.com/user-attachments/assets/6ef09c2f-97b3-4a40-ac2b-d3987cc3b077" />
