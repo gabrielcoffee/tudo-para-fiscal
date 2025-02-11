@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import "../styles/index.css"
 import CountrySelector from "../components/CountrySelector";
 
+import logo from "../assets/logotudopara.png";
 
 export default function Home() {
 const [numero, setNumero] = useState("");
@@ -70,7 +71,7 @@ return (
 	<main className="flex-grow flex items-center justify-center px-4 my-12">
 		<div className="text-left max-w-5xl flex flex-col items-center gap-6">
 
-		<img width={200} className="mb-8 mt-3" src="/src/assets/logotudopara.png"></img>
+		<img width={200} className="mb-8 mt-3" src={logo} alt="Logo da Tudo Para Fiscal"></img>
 
 		<div className="text-center text-5xl text-[#2a2b28] text-balance">Verifique se um número faz parte da equipe oficial da <strong><span className="text-[#062846] ">Tudo Para</span></strong></div>
 	
