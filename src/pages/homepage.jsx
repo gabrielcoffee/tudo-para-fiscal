@@ -73,7 +73,7 @@ return (
 
 		<img width={200} className="mb-8 mt-3" src={logo} alt="Logo da Tudo Para Fiscal"></img>
 
-		<div className="text-center text-5xl text-[#2a2b28] text-balance">Verifique se um número faz parte da equipe oficial da <strong><span className="text-[#062846] ">Tudo Para</span></strong></div>
+		<div className="text-center text-5xl text-[#2a2b28] text-balance">Verifique se um número faz parte da equipe oficial da <strong><span className="text-[#383a36] ">Tudo Para</span></strong></div>
 	
 		
 		<div className="flex flex-col items-center">
@@ -83,6 +83,7 @@ return (
 		<div className="w-full max-w-md mx-auto">
 			<div className="flex flex-col space-y-4 justify-center">
 			<input
+			maxLength={11}
 				type="tel"
 				placeholder={placeholderNumber}
 				value={numero}
@@ -91,7 +92,7 @@ return (
 			/>
 			<button
 				onClick={handleSubmit}
-				className="bg-[#062846] hover:bg-[#0b3559] text-white text-lg py-3 px-6 rounded-full transition-colors duration-300 hover:cursor-pointer"
+				className="bg-[#383a36] hover:bg-[#191a19] text-white text-lg py-3 px-6 rounded-full transition-colors duration-300 hover:cursor-pointer"
 			>
 				Verificar
 			</button>
@@ -114,7 +115,7 @@ return (
 
 			<ul className="list-disc text-left mx-6 pl-[40px] text-sm">
 				<li>Preencha apenas com números;</li>
-				<li>Lembre-se de incluir o DDD do Estado;</li>
+				<li>Lembre-se de incluir o DDD do Estado e o nono dígito;</li>
 				<li>Não é necessário colocar o código do Brasil: +55 nem EUA: +1</li>
 			</ul>
 
@@ -133,10 +134,10 @@ return (
 		<div className="text-[#383a36]">© 2025 Tudo Para</div>
 		<div className="flex flex-col space-y-2 md:space-y-0 md:space-x-8 md:flex-row">
 
-				<a href="/politica-de-privacidade" className="text-left text-[#383a36] hover:text-[#062846]">
+				<a href="/politica-de-privacidade" className="text-left text-[#383a36] hover:text-[#151515]">
 				Política de Privacidade
 				</a>
-				<a href="/termos-de-uso" className="text-left text-[#383a36] hover:text-[#062846]">
+				<a href="/termos-de-uso" className="text-left text-[#383a36] hover:text-[#151515]">
 				Termos de Uso
 				</a>
 
