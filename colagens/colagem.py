@@ -7,7 +7,9 @@ Layouts (a 1a foto da lista ocupa a 1a caixa, e assim por diante):
   "faixa-topo":   faixa larga em cima + 2 retratos embaixo
   "tall-esq":     retrato alto à esquerda + 2 fotos empilhadas à direita
   "tall-dir":     2 fotos empilhadas à esquerda + retrato alto à direita
+  "faixa-base":   2 retratos em cima + faixa larga embaixo
   "video-esq":    caixa 9:16 (vídeo) + foto embaixo + retrato alto à direita
+  "video-dir":    o mesmo, espelhado (vídeo no canto superior direito)
 
 Uso: python colagem.py config.json saida.jpg
 
@@ -56,9 +58,16 @@ def caixas(layout, g):
             return [(g, g, tw, ih), (2 * g + tw, g, sw, sh), (2 * g + tw, 2 * g + sh, sw, sh)]
         lw, rw = 640, iw - 640 - g
         return [(g, g, lw, sh), (g, 2 * g + sh, lw, sh), (2 * g + lw, g, rw, ih)]
-    if layout == "video-esq":
+    if layout == "faixa-base":
+        fh = 470
+        bh = BH - 3 * g - fh
+        return [(g, 2 * g + bh, iw, fh), (g, g, q, bh), (2 * g + q, g, q, bh)]
+    if layout in ("video-esq", "video-dir"):
         vw, vh = 506, 900  # 9:16
-        return [(g, g, vw, vh), (g, 2 * g + vh, vw, BH - 3 * g - vh), (2 * g + vw, g, iw - vw - g, ih)]
+        lh, tw = BH - 3 * g - vh, iw - vw - g
+        if layout == "video-esq":
+            return [(g, g, vw, vh), (g, 2 * g + vh, vw, lh), (2 * g + vw, g, tw, ih)]
+        return [(g + tw + g, g, vw, vh), (g + tw + g, 2 * g + vh, vw, lh), (g, g, tw, ih)]
     raise ValueError(layout)
 
 

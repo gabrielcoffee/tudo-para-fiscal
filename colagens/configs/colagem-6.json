@@ -2,20 +2,20 @@
  "layout": "tall-dir",
  "fotos": [
   {
-   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/8c72846c-image.jpg",
+   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/20d764a1-image.jpg",
    "foco": [
-    0.47,
-    0.4
+    0.57,
+    0.5
    ]
   },
   {
    "placeholder": "FOTO PENDENTE"
   },
   {
-   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/bc081e54-image.jpg",
+   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/32986ae9-image.jpg",
    "foco": [
-    0.45,
-    0.45
+    0.6,
+    0.5
    ]
   }
  ]

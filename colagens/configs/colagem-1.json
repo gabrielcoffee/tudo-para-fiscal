@@ -1,25 +1,25 @@
 {
- "layout": "grande-cima",
+ "layout": "faixa-topo",
  "fotos": [
   {
-   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/b48b2186-image.jpg",
+   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/8c72846c-image.jpg",
    "foco": [
-    0.56,
-    0.5
+    0.5,
+    0.42
    ]
   },
   {
-   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/6ab0eae7-image.jpg",
+   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/c5b6d604-image.jpg",
    "foco": [
-    0.5,
+    0.65,
     0.5
    ]
   },
   {
    "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/da4a8bed-image.jpg",
    "foco": [
-    0.55,
-    0.4
+    0.5,
+    0.46
    ]
   }
  ]

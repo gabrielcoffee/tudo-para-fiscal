@@ -1,5 +1,5 @@
 {
- "layout": "grande-baixo",
+ "layout": "grande-cima",
  "fotos": [
   {
    "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/ce2dc47d-image.jpg",
@@ -9,17 +9,17 @@
    ]
   },
   {
-   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/20d764a1-image.jpg",
+   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/6ab0eae7-image.jpg",
    "foco": [
-    0.56,
-    0.45
+    0.5,
+    0.5
    ]
   },
   {
-   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/32986ae9-image.jpg",
+   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/e197bfef-image.jpg",
    "foco": [
-    0.55,
-    0.5
+    0.5,
+    0.45
    ]
   }
  ]
