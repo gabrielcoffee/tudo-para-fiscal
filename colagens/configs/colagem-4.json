@@ -1,0 +1,26 @@
+{
+ "layout": "faixa-topo",
+ "fotos": [
+  {
+   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/c5b6d604-image.jpg",
+   "foco": [
+    0.5,
+    0.22
+   ]
+  },
+  {
+   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/e197bfef-image.jpg",
+   "foco": [
+    0.6,
+    0.55
+   ]
+  },
+  {
+   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/682d29c4-image.jpg",
+   "foco": [
+    0.5,
+    0.5
+   ]
+  }
+ ]
+}

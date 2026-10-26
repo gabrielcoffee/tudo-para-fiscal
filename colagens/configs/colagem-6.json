@@ -1,0 +1,22 @@
+{
+ "layout": "tall-dir",
+ "fotos": [
+  {
+   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/8c72846c-image.jpg",
+   "foco": [
+    0.47,
+    0.4
+   ]
+  },
+  {
+   "placeholder": "FOTO PENDENTE"
+  },
+  {
+   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/bc081e54-image.jpg",
+   "foco": [
+    0.45,
+    0.45
+   ]
+  }
+ ]
+}

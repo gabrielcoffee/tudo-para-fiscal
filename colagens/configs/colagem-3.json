@@ -1,0 +1,26 @@
+{
+ "layout": "grande-baixo",
+ "fotos": [
+  {
+   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/ce2dc47d-image.jpg",
+   "foco": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/20d764a1-image.jpg",
+   "foco": [
+    0.56,
+    0.45
+   ]
+  },
+  {
+   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/32986ae9-image.jpg",
+   "foco": [
+    0.55,
+    0.5
+   ]
+  }
+ ]
+}

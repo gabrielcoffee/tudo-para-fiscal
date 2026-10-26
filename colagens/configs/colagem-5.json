@@ -1,0 +1,22 @@
+{
+ "layout": "video-esq",
+ "fotos": [
+  {
+   "buraco": true
+  },
+  {
+   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/83405e09-image.jpg",
+   "foco": [
+    0.4,
+    0.42
+   ]
+  },
+  {
+   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/f96f1d92-image.jpg",
+   "foco": [
+    0.55,
+    0.4
+   ]
+  }
+ ]
+}

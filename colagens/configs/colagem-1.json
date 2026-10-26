@@ -1,0 +1,26 @@
+{
+ "layout": "grande-cima",
+ "fotos": [
+  {
+   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/b48b2186-image.jpg",
+   "foco": [
+    0.56,
+    0.5
+   ]
+  },
+  {
+   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/6ab0eae7-image.jpg",
+   "foco": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "arquivo": "/root/.claude/uploads/a0da3f03-8b51-50cf-ac0e-1779be717bfc/da4a8bed-image.jpg",
+   "foco": [
+    0.55,
+    0.4
+   ]
+  }
+ ]
+}
