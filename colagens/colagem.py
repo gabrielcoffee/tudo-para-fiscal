@@ -1,23 +1,19 @@
-"""Gera colagens 4:5 para o Instagram.
+"""Gera colagens 4:5 para o Instagram com 3 fotos cada (exportado em 2160x2700).
 
-Layout (base 1080x1350, exportado em 2x = 2160x2700):
-  - 1 foto grande (largura total, proporção 2:1)
-  - 2 quadrados lado a lado
-  - 3 horizontais iguais (4:3) lado a lado
-A ordem das faixas é configurável por colagem.
+Layouts:
+  "grande-2q": 1 foto grande + 2 quadrados lado a lado (grande em cima ou embaixo)
+  "3h":        3 fotos horizontais iguais, empilhadas
 
-Uso:
-  python colagem.py config.json saida.jpg
+Uso: python colagem.py config.json saida.jpg
 
 config.json:
 {
-  "ordem": ["grande", "quadrados", "horizontais"],
+  "layout": "grande-2q", "grande_em_cima": true,
   "espaco": 12, "fundo": "#ffffff",
-  "grande": {"arquivo": "a.jpg", "foco": [0.5, 0.4]},
-  "quadrados": [{"arquivo": "b.jpg"}, {"arquivo": "c.jpg", "foco": [0.5, 0.3]}],
-  "horizontais": [{"arquivo": "d.jpg"}, {"arquivo": "e.jpg"}, {"arquivo": "f.jpg"}]
+  "fotos": [{"arquivo": "a.jpg", "foco": [0.5, 0.3]}, {...}, {...}]
 }
-"foco" = ponto (x, y de 0 a 1) que deve ficar visível no recorte; padrão é o centro.
+Em "grande-2q" a 1a foto é a grande. "foco" = ponto (x, y de 0 a 1) que deve
+ficar no centro do recorte (padrão: centro da foto).
 """
 import json
 import sys
@@ -40,42 +36,25 @@ def recortar(img, w, h, foco=(0.5, 0.5)):
     return img.crop((x, y, x + w, y + h))
 
 
-def carregar(spec, base):
-    img = ImageOps.exif_transpose(Image.open(base / spec["arquivo"])).convert("RGB")
-    return img, tuple(spec.get("foco", (0.5, 0.5)))
-
-
-def faixa(n, g, altura_ratio):
-    """Largura de cada célula numa faixa de n fotos e a altura pela proporção."""
-    cw = (W - g * (n + 1)) / n
-    return cw, cw / altura_ratio
+def celulas(layout, g, em_cima):
+    """Retorna as caixas (x, y, w, h) de cada foto, na ordem de config['fotos']."""
+    if layout == "3h":
+        h = (H - 4 * g) // 3
+        return [(g, g + i * (h + g), W - 2 * g, h) for i in range(3)]
+    q = (W - 3 * g) // 2
+    gh = H - 3 * g - q
+    if em_cima:
+        return [(g, g, W - 2 * g, gh), (g, 2 * g + gh, q, q), (2 * g + q, 2 * g + gh, q, q)]
+    return [(g, 2 * g + q, W - 2 * g, gh), (g, g, q, q), (2 * g + q, g, q, q)]
 
 
 def gerar(cfg, base):
     g = cfg.get("espaco", 12) * ESCALA
-    fundo = cfg.get("fundo", "#ffffff")
-    ordem = cfg.get("ordem", ["grande", "quadrados", "horizontais"])
-
-    # Alturas: quadrados e horizontais têm proporção fixa; a grande ocupa o resto.
-    alturas = {
-        "quadrados": faixa(2, g, 1.0)[1],
-        "horizontais": faixa(3, g, 4 / 3)[1],
-    }
-    alturas["grande"] = H - g * 4 - alturas["quadrados"] - alturas["horizontais"]
-
-    canvas = Image.new("RGB", (W, H), fundo)
-    y = g
-    for nome in ordem:
-        specs = cfg[nome] if isinstance(cfg[nome], list) else [cfg[nome]]
-        n = len(specs)
-        cw = (W - g * (n + 1)) / n
-        ch = round(alturas[nome])
-        for i, spec in enumerate(specs):
-            x0 = round(g + i * (cw + g))
-            x1 = round(g + (i + 1) * cw + i * g)
-            img, foco = carregar(spec, base)
-            canvas.paste(recortar(img, x1 - x0, ch, foco), (x0, round(y)))
-        y += ch + g
+    canvas = Image.new("RGB", (W, H), cfg.get("fundo", "#ffffff"))
+    caixas = celulas(cfg["layout"], g, cfg.get("grande_em_cima", True))
+    for spec, (x, y, w, h) in zip(cfg["fotos"], caixas):
+        img = ImageOps.exif_transpose(Image.open(base / spec["arquivo"])).convert("RGB")
+        canvas.paste(recortar(img, w, h, tuple(spec.get("foco", (0.5, 0.5)))), (x, y))
     return canvas
 
 
