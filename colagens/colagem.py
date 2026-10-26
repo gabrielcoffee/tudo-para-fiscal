@@ -15,7 +15,7 @@ Uso: python colagem.py config.json saida.jpg
 
 config.json:
 {
-  "layout": "grande-cima", "espaco": 12, "fundo": "#ffffff",
+  "layout": "grande-cima", "espaco": 12, "fundo": "#000000",
   "fotos": [
     {"arquivo": "a.jpg", "foco": [0.5, 0.3]},
     {"placeholder": "FOTO PENDENTE"},
@@ -83,7 +83,7 @@ def recortar(img, w, h, foco=(0.5, 0.5)):
 
 def gerar(cfg, base):
     g = cfg.get("espaco", 12)
-    canvas = Image.new("RGB", (BW * ESCALA, BH * ESCALA), cfg.get("fundo", "#ffffff"))
+    canvas = Image.new("RGB", (BW * ESCALA, BH * ESCALA), cfg.get("fundo", "#000000"))
     buracos = []
     for spec, caixa in zip(cfg["fotos"], caixas(cfg["layout"], g)):
         x, y, w, h = (v * ESCALA for v in caixa)
